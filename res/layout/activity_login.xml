@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello there! This is Syncshot, built in two days for HackIllinois 2016!\n\nWhat does this app do? It&apos;s a two-in-one event planner and photo syncing service that lets you share your photos with all your friends in just one tap.\n\nBuilt on top of MS Azure using the Kotlin programming language.\n\nReady to get started? Sign in using your Twitter account by hitting the button below!"
+        android:id="@+id/loginLabel"
+        android:layout_margin="6dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Login"
+        android:id="@+id/loginButton"
+        />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.crossbowffs.syncshot">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <application
+        android:label="Syncshot"
+        android:name=".MyApp"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.EventListActivity"
+            android:label="Syncshot">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.EventDetailsActivity"
+            android:label="Event details">
+        </activity>
+        <activity
+            android:name=".activity.CreateEventActivity"
+            android:label="Create event">
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="Login">
+        </activity>
+        <activity
+            android:name=".activity.SetupUserActivity"
+            android:label="Setup user">
+        </activity>
+        <activity
+            android:name=".activity.UserEventPhotosActivity"
+            android:label="User photos">
+        </activity>
+    </application>
+</manifest>
